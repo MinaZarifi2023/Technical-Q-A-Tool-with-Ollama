@@ -23,7 +23,7 @@ Type 'exit' to quit.
 ❓ Your technical question:
 Please explain what this code does and why:
 yield from {book.get("author") for book in books if book.get("author")}
-
+``` 
 💡 Explanation:
 [ model response here... ]
 ---
@@ -36,6 +36,7 @@ yield from {book.get("author") for book in books if book.get("author")}
 
 ```bash
 ollama pull llama3.2
+```
 
 ## 📦 How to Run
 Make sure Ollama CLI is installed and set up correctly.
