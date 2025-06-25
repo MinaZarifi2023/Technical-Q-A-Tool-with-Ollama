@@ -1,6 +1,11 @@
 # 🧠 Technical Q&A Tool with Ollama (llama3.2)
 
 This is a simple command-line Python tool that uses the [Ollama](https://ollama.com) CLI with the `llama3.2` model to explain technical code snippets or questions in a clear and beginner-friendly way.
+This code is a simple Python command-line tool that uses the `llama3.2` model via the Ollama CLI to answer technical questions.
+The `ask_llama` function formats the user's question into a prompt, sends it to Ollama using `subprocess.run`, and returns the model's response.
+The main program loop lets the user input questions interactively until they type `exit`.
+It also handles possible errors from the Ollama CLI and shows error messages if they occur.
+A sample technical question is included in the code, which can be replaced with any other question.
 
 ---
 
