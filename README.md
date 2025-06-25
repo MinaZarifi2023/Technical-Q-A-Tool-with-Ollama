@@ -45,6 +45,22 @@ Clone this repository:
 git clone https://github.com/MinaZarifi2023/Technical-Q-A-Tool-with-Ollama.git
 cd Technical-Q-A-Tool-with-Ollama
 
+## 🛠️ How It Works
+- Takes your input question
+
+- Formats a prompt with it
+
+- Sends the prompt to ollama run llama3.2 using subprocess
+
+- Returns the model's answer
+
+## 💡 Sample Question Included
+```bash
+ yield from {book.get("author") for book in books if book.get("author")}
+```
+
+
+
 
 
 
