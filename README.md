@@ -1,69 +1,68 @@
-# 🧠 Technical Q&A Tool with Ollama (llama3.2)
 
-This is a simple command-line Python tool that uses the [Ollama](https://ollama.com) CLI with the `llama3.2` model to explain technical code snippets or questions in a clear and beginner-friendly way.
-This code is a simple Python command-line tool that uses the `llama3.2` model via the Ollama CLI to answer technical questions.
-The `ask_llama` function formats the user's question into a prompt, sends it to Ollama using `subprocess.run`, and returns the model's response.
-The main program loop lets the user input questions interactively until they type `exit`.
-It also handles possible errors from the Ollama CLI and shows error messages if they occur.
-A sample technical question is included in the code, which can be replaced with any other question.
+# Technical Q&A Tool with Ollama (llama3.2)
 
----
+A command-line tool that uses the `llama3.2` model via the [Ollama](https://ollama.com) CLI to explain technical code snippets or answer programming questions in simple terms.
 
-## 🚀 Features
+This Python script lets you ask technical questions in the terminal and get simple explanations using the `llama3.2` model via the Ollama CLI.
 
-- Ask **technical programming questions** directly in the terminal  
-- Uses the `llama3.2` model via `ollama run`  
-- Automatically formats your prompt to get clean and understandable explanations  
-- Gracefully handles errors from the CLI
+* It formats your question into a prompt.
+* Sends the prompt to the Ollama command-line tool using `subprocess`.
+* Captures and shows the model’s response.
+* If there's an error calling Ollama, it shows the error message instead of crashing.
+* The program runs in a loop, letting you ask multiple questions until you type "exit".
 
----
+The sample question asks for an explanation of a Python code snippet that extracts authors from a list of books.
 
-## 🧩 Example Use Case
+
+## Features
+
+- Accepts technical questions interactively from the terminal  
+- Uses `ollama run llama3.2` to generate responses  
+- Formats questions into prompts for better answers  
+- Handles errors from the Ollama CLI without crashing  
+
+## Requirements
+
+- Python 3.7 or higher  
+- Ollama CLI installed and configured  
+- `llama3.2` model pulled via:
+
+
+## Usage
+
+Clone the repository and run the script:
+
+```bash
+git clone https://github.com/MinaZarifi2023/Technical-Q-A-Tool-with-Ollama.git
+cd Technical-Q-A-Tool-with-Ollama
+python ask_llama.py
+```
+
+## Example
 
 ```bash
 $ python ask_llama.py
-🔍 Technical Question Explainer using llama3.2
+Technical Question Explainer using llama3.2
 Type 'exit' to quit.
 
-❓ Your technical question:
+Your technical question:
 Please explain what this code does and why:
 yield from {book.get("author") for book in books if book.get("author")}
 
-💡 Explanation:
+Explanation:
 [ model response here... ]
-``` 
----
-
-## ⚙️ Requirements
-
-- Python 3.7+
-- Ollama CLI installed
-- `llama3.2` model already pulled via:
-
-```bash
-ollama pull llama3.2
+Type your technical question at the prompt. Enter exit to quit
 ```
 
-## 📦 How to Run
-Make sure Ollama CLI is installed and set up correctly.
 
-Clone this repository:
-git clone https://github.com/MinaZarifi2023/Technical-Q-A-Tool-with-Ollama.git
-cd Technical-Q-A-Tool-with-Ollama
+## How it works
 
-## 🛠️ How It Works
-- Takes your input question
+- Reads your input question
+- Creates a prompt for the llama3.2 model
+- Runs Ollama CLI using subprocess with the prompt
+- Returns and displays the model's explanation
+- Shows error messages if the CLI call fails
 
-- Formats a prompt with it
-
-- Sends the prompt to ollama run llama3.2 using subprocess
-
-- Returns the model's answer
-
-## 💡 Sample Question Included
-```bash
- yield from {book.get("author") for book in books if book.get("author")}
-```
 
 
 
